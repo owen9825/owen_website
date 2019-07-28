@@ -1,0 +1,21 @@
+---
+layout: splash
+title: Hello
+---
+<link href="{{ site.baseurl }}/bower_components/intl-tel-input/build/css/intlTelInput.css" rel="stylesheet"/>
+
+{% for post in paginator.posts %}
+
+	<article class="post">
+
+		<h1>
+			<a href="{{ site.baseurl }}/#">{{ post.title }}</a>
+		</h1>
+
+		<div class="post-content">{{ post.content }}</div>
+
+	</article>
+
+{% endfor %}
+
+<a href="https://www.facebook.com/tanukiAI/">Contact us through Facebook.</a>

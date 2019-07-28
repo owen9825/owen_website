@@ -1,0 +1,22 @@
+{
+  "name": "owen.engineer",
+  "homepage": "https://owen.engineer",
+  "authors": [
+    "Owen Miller <owen9825@gmail.com>"
+  ],
+  "description": "Personal website for Owen Miller",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^1.11.1",
+    "intl-tel-input": "^12.0.1"
+  }
+}

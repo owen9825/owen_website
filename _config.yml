@@ -1,0 +1,51 @@
+author: Owen Miller
+phonetic: オウェン
+title: Owen Miller ⚗🇦🇺✨
+baseurl : ''
+locale: "en-au"
+timezone: "Australia/Sydney"
+url: https://owen.engineer
+
+# SEO Related
+# https://search.google.com/search-console/not-verified?original_url=/search-console/ownership&original_resource_id
+google_site_verification : "EGw9ocP-Ozl04do549w1IiHGNR9zMBT6ok5GaMKbS-0"
+bing_site_verification   :
+alexa_site_verification  :
+yandex_site_verification :
+
+  # Linked Accounts
+linked_accounts:
+-  { name: facebook, url: 'https://www.facebook.com/owen.miller.986' }
+-  { name: twitter, url: 'https://twitter.com/kokociel1' }
+-  { name: instagram, url: 'https://instagram.com/kokociel/' }
+-  { name: google-plus, url: '' }
+-  { name: linkedin, url: 'https://www.linkedin.com/in/owen-miller-12112273/' }
+-  { name: skype, url: '' }
+-  { name: github, url: 'http://www.github.com/owen9825' }
+-  { name: codepen, url: '' }
+-  { name: stack-overflow, url: 'https://stackoverflow.com/users/1495729/kokociel' }
+-  { name: dribbble, url: '' }
+-  { name: behance, url: '' }
+-  { name: pinterest, url: '' }
+-  { name: tumblr, url: '' }
+-  { name: youtube, url: '' }
+-  { name: vimeo, url: '' }
+-  { name: vine, url: '' }
+-  { name: 500px, url: '' }
+-  { name: flickr, url: '' }
+-  { name: spotify, url: 'https://open.spotify.com/user/12140765598' }
+-  { name: steam, url: '' }
+-  { name: wordpress, url: '' }
+-  { name: xing, url: '' }
+-  { name: bitcoin, url: '' }
+-  { name: pocket, url: '' }
+-  { name: applemusic, url: '' }
+
+permalink: /:title/
+paginate: 100
+
+gems:
+  - jekyll-sitemap
+
+plugins_dir: [jekyll-paginate, jekyll-bower]
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'bower.json', 'node_modules', 'package.json', '*.patch', '*.csv']
