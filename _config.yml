@@ -26,9 +26,9 @@ linked_accounts:
 -  { name: stack-overflow, url: 'https://stackoverflow.com/users/1495729/kokociel' }
 -  { name: dribbble, url: '' }
 -  { name: behance, url: '' }
--  { name: pinterest, url: '' }
+-  { name: pinterest, url: 'https://www.pinterest.com/owen9825/' }
 -  { name: tumblr, url: '' }
--  { name: youtube, url: '' }
+-  { name: youtube, url: 'https://www.youtube.com/channel/UCBIZjFLxs56fkBjodGIa2rw' }
 -  { name: vimeo, url: '' }
 -  { name: vine, url: '' }
 -  { name: 500px, url: '' }

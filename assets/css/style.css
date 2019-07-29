@@ -137,7 +137,7 @@ h3 {
 #header {
 	width: 600px;
 	margin: 40px auto 20px auto;
-    text-align: right;
+  text-align: right;
 }
 #header h1 {
 	font-size: 4.2em;
@@ -181,7 +181,9 @@ h3 {
 	padding: 2px 4px;
 }
 
-/** Linked accounts - typicall 'social' accounts */
+/** Linked accounts - typicall 'social' accounts
+https://jekyllthemes.dev/personal-portfolio-to-play-with-jekyll-and-github-pages/
+**/
 
 .socials {
 	display: flex;
