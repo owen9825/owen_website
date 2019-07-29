@@ -34,7 +34,7 @@ linked_accounts:
 -  { name: 500px, url: '' }
 -  { name: flickr, url: '' }
 -  { name: spotify, url: 'https://open.spotify.com/user/12140765598' }
--  { name: steam, url: '' }
+-  { name: steam, url: 'https://steamcommunity.com/id/kokociel' }
 -  { name: wordpress, url: '' }
 -  { name: xing, url: '' }
 -  { name: bitcoin, url: '' }
