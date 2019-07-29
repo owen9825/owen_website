@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="{{ site.locale | default: "en" }}">
+<head>
+
+  <meta charset="UTF-8">
+  <title>{{ site.title }}</title>
+  <meta name="viewport" content="width=device-width">
+  {% include analytics.html %}
+  <link href="https://fonts.googleapis.com/css?family=Carter+One|Luckiest+Guy|Press+Start+2P" rel="stylesheet">
+  <!--link href="{{ site.baseurl }}/images/favicon128.png" rel="icon" sizes="128x128" type="images/png"/-->
+  <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet" />
+  <link href="{{ site.baseurl }}/assets/css/colors-cv.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="avatar">
+      <img src="{{ site.baseurl }}/media/Owen in Toronto.jpg"
+      class="img-circle" alt="Owen in Toronto" width=200/>
+    </div>
+    <hgroup class="site-heading">
+      <h1><a href="{{ site.baseurl }}/">{{ site.author }}</a></h1>
+      <h2 lang="jp">({{ site.phonetic }})</h2>
+    </hgroup>
+  </header>
+
+  <div id="page">
+    {% include sidebar.html %}
+
+    <div id="content">
+      <p lang="{{ site.locale | default: "en" }}"">
+        Hi 👋 I'm Owen. I work as a software engineer in New York. I enjoy this field as it's the most practical way for me to influence the future. If you'd also like to take over the world, then say hi :)
+      </p>
+      <p>
+        If you'd like me to work with you; if you'd like to work for me; or if you'd like professional advice, then those are also good reasons to reach out.
+      </p>
+      <p>
+        I can build software from the groud up at small start-ups (<a href="https://bevrly.com">Bevrly</a>, <a href="https://tanuki.ai">Tanuki.ai</a>, <a href="http://wx.io">Wx.io</a>)
+      </p>
+      <br>
+      <ul class="socials">
+        {% for linked_account in site.linked_accounts %}
+          {% if linked_account.url != '' %}
+            <li><a href="{{ linked_account.url }}"><svg title="{{ linked_account.name }}"
+              width="1.5rem" height="1.5rem" {% if social.name == 'applemusic' %} style="margin: 0 0 0 -2px" {% endif %}><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl | prepend: site.url }}/assets/svg/social-icons.svg#{{ linked_account.name }}-icon"></use></svg></a>
+            </li>
+          {% endif %}
+        {% endfor %}
+
+        {% if site.email != blank and site.show_email == 1 %}
+          <li><a href="mailto:{{site.email}}"><svg title="{{linked_account.name}}" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl | prepend: site.url }}/assets/svg/social-icons.svg#email-icon"></use></svg></a></li>
+        {% endif %}
+
+        {% if site.show_rss == 1 %}
+          <li><a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}"><svg title="{{linked_account.name}}" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl | prepend: site.url }}/assets/svg/social-icons.svg#rss-icon"></use></svg></a></li>
+        {% endif %}
+      </ul>
+      <link rel="stylesheet" href="{{ site.baseurl }}/bower_components/intl-tel-input/build/css/intlTelInput.css">
+      <form class="form-inline" action="https://getsimpleform.com/messages?form_api_token=f0ffa35342caf970d4d238510b0bc77f" method="post">
+        <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+        <input type='hidden' name='redirect_to' value='https://media.giphy.com/media/xT5LMrH18OTqQ7QDBu/giphy.gif'/>
+
+        <!-- all your input fields here.... -->
+        <label for="name">Name:</label>
+        <input type="text" name='name' placeholder="Your name" class="form-control"/>
+        <label for="email">Email address:</label>
+        <input type="email" name="email" id="email" placeholder="hello@example.com" class="form-control"/>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" class="form-control"/>
+        <label for="message">Message:</label>
+        <textarea lang="en,fr" name="message" placeholder="Hello Owen, I need to tell you something"></textarea>
+        <input type='submit' value='Submit' class="btn"/>
+      </form>
+    </div>
+
+  </div>
+
+  {% include footer.html %}
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/jquery.mobilemenu.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#sidebar nav ul').mobileMenu({'topOptionText': 'Menu', 'prependTo': '#sidebar nav'});
+    });
+  </script>
+  <script src="{{ site.baseurl }}/bower_components/intl-tel-input/build/js/intlTelInput.js"></script>
+  <script>
+    $("#phone").intlTelInput({"preferredCountries":["us","au"], "utilsScript":"{{ site.baseurl }}/bower_components/intl-tel-input/build/js/utils.js"});
+  </script>
+</body>
+</html>

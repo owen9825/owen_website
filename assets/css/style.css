@@ -1,0 +1,317 @@
+/*** Color definitions ***/
+:root {
+    --deep-purlpe: #874c98;
+		--alien-green: #83d496;
+		--gold: #a5937b;
+}
+
+/*** Reset ***/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, input, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+header {
+    clear:both;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: bullet;
+}
+
+blockquote, q {
+	quotes: none;
+    font-family: 'Press Start 2P', cursive;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*** Basics ***/
+body {
+	font-family: 'din', fantasy, serif;
+ /* font size should be set by the browser, not our site */
+	line-height: 1.7;
+}
+
+a, a:active, a:visited {
+	text-decoration: none;
+	border-bottom: 1px solid #839496;
+	padding-bottom: 2px;
+}
+a:hover {
+	background-color: #839496;
+	color: #000000;
+}
+
+form, input, textarea {
+    width:100%;
+    font-family: 'din', fantasy;
+}
+
+p, pre { margin-bottom: 15px; }
+ul, ol { padding: 0 0 18px 30px; }
+ol li, ul li { margin-top: 10px; margin-bottom: 10px; }
+em, i { font-style: italic; }
+strong, b { font-weight: bold; }
+small { font-size: 0.85em; }
+sup { vertical-align: super; font-size: 0.85em; }
+sub { vertical-align: sub; font-size: 0.85em; }
+
+code {
+    font: 0.85em Monaco, Courier, Monospace;
+}
+
+blockquote {
+    margin: 22px 22px;
+    padding: 0 20px;
+    border-left: 2px solid #000000;
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 1.5em;
+}
+
+acronym, abbr {
+	cursor: help;
+	letter-spacing: 1px;
+	border-bottom: 1px dashed;
+}
+
+
+h1 {
+	font-size: 3.5rem;
+  font-family: 'Carter One', cursive;
+	margin: 0 0 0.5rem 0;
+}
+h2 {
+	font-size: 2rem;
+	margin: 0 0 0.5rem 0;
+}
+h3 {
+	font-size: 1.7rem;
+	margin: 0 0 0.5rem 0;
+}
+
+
+
+/*** Useful Classes ***/
+.clear { clear: both; }
+.float-left { float: left; }
+.float-right { float: right; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+.img-left { float: left; margin: 4px 10px 4px 0; }
+.img-right { float: right; margin: 4px 0 4px 10px; }
+.img-middle { vertical-align: middle; }
+.nopadding { padding: 0; }
+.nounderline { text-decoration: underline; }
+
+
+
+/*** Structure ***/
+#page {
+	width: 600px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#header {
+	width: 600px;
+	margin: 40px auto 20px auto;
+    text-align: right;
+}
+#header h1 {
+	font-size: 4.2em;
+	margin-bottom: 4px;
+}
+#header h1 a {
+	border: none;
+}
+
+#footer {
+	width: 600px;
+	margin: 50px auto 20px auto;
+	padding-top: 10px;
+	font-size: 0.85em;
+	border-top: 1px solid #073642;
+}
+
+#content {
+	width: 600px;
+	margin: 0 auto;
+}
+
+#sidebar {
+	position: absolute;
+	text-align: right;
+	width: 160px;
+	top: 0;
+	left: -240px;
+}
+
+#sidebar li {
+	list-style: none;
+    font-family: 'Cartor One', cursive;
+	margin: 2px 0;
+}
+
+#sidebar a {
+	border: none;
+	font-family: 'Carter One', fantasy;
+    font-size: 2.2em;
+	padding: 2px 4px;
+}
+
+/** Linked accounts - typicall 'social' accounts */
+
+.socials {
+	display: flex;
+	list-style: none;
+}
+
+.socials li {
+	margin: 5px;
+	text-align: center;
+}
+
+.socials a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	background: var(--alien-green);
+	-webkit-transition: all 0.1s ease;
+	padding: 0rem;
+	border-width: 0rem;
+}
+
+.socials li a svg * {
+	fill: var(--deep-purple);
+}
+
+div .horizontal-container {
+    display: inline-block;
+}
+
+.mascot {
+    /*align-content: left;*/
+    float: left;
+}
+
+/*** Posts ***/
+article {
+	margin-bottom: 40px;
+}
+
+article h1 {
+	font-size: 20px;
+	margin: 0 0 2rem 0;
+}
+article h1 a {
+	border: none;
+}
+article h1 a.anchor {
+	margin-left: 8px;
+}
+
+article img {
+	display: block;
+	text-align: center;
+	margin: 0 auto 1em auto;
+}
+
+article .meta {
+	padding-top: 6px;
+	font-size: 0.85em;
+	font-style: italic;
+}
+
+img.left {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+img.right {
+	float: right;
+	margin: 0 0 1em 1em;
+}
+img.center {
+	display: block;
+	text-align: center;
+	margin: 0 auto 1em auto;
+}
+
+
+
+/*** Pagination ***/
+.postnavigation {
+	padding-top: 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+.postnavigation .left {
+	float: left;
+}
+
+.postnavigation .right {
+	float: right;
+}
+
+
+
+/*** Media Queries ***/
+@media all and (max-width: 870px) {
+
+	#page, #header, #content, #footer {
+		width: inherit;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#sidebar {
+		position: relative;
+		text-align: left;
+		width: 100%;
+		left: 0;
+		margin: 10px 10px 20px 10px;
+	}
+
+	#sidebar nav select.mnav {
+		display: block;
+		margin-bottom: 15px; /* Margin is outside the border */
+	}
+
+}
+
+/*** Din ***/
+@font-face {
+    font-family: 'din';
+    src: url('../fonts/din1451alt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.intl-tel-input {
+    width: 100%; /* ensure consistency with other input forms */
+}
