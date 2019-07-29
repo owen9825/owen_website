@@ -1,0 +1,146 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script-->
+<script src="https://rawgit.com/jwagner/simplex-noise.js/master/simplex-noise.js"></script>
+<script>
+  ((window, document, math, three, simplex, undefined) => {
+
+  	const PI = math.PI;
+
+  	class Config {
+  		constructor(opts) {
+  			this.merge(opts);
+  		}
+  		merge(opts) {
+  			for (let opt in opts)
+  				this.set(opt, opts[opt]);
+  		}
+  		set(key, value) {
+  			if (!key || !value)
+  				return;
+  			else
+  				this[key] = value;
+  		}
+  	}
+
+  	class App {
+  		constructor() {
+  			let defaults = {
+  				dimensions: {
+  					x: 0,
+  					y: 0
+  				},
+  				camera: {
+  					fov: 70,
+  					aspectRatio: 0,
+  					nearPlane: 0.1,
+  					farPlane: 10000,
+  					distanceX: 5,
+  					distanceY: 450,
+  					distanceZ: -5,
+  					speedX: 0.8,
+  					speedY: 0.4,
+  					speedZ: 0.1
+  				}
+  			};
+
+  			this.tick = 0;
+  			this.simplex = new simplex();
+  			this.config = new Config(defaults);
+  			/*this.stats = new Stats();*/
+
+  			this.initCamera();
+  			this.initScene();
+  			this.initLights();
+  			this.initMesh();
+
+  			/*document.body.appendChild(this.stats.domElement);*/
+  			window.onresize = () => {
+  				this.setSize();
+  			};
+  			this.render();
+  		}
+
+  		setSize() {
+  			this.config.dimensions.x = window.innerWidth;
+  			this.config.dimensions.y = window.innerHeight;
+  			this.renderer.setSize(this.config.dimensions.x, this.config.dimensions.y);
+  			this.camera.aspect = this.config.camera.aspectRatio = this.config.dimensions.x / this.config.dimensions.y;
+  			this.camera.updateProjectionMatrix();
+  		}
+
+  		initCamera() {
+  			this.camera = new three.PerspectiveCamera(
+  				this.config.camera.fov,
+  				this.config.camera.aspectRatio,
+  				this.config.camera.nearPlane,
+  				this.config.camera.farPlane
+  			);
+  		}
+
+  		initScene() {
+  			this.scene = new three.Scene();
+  			this.scene.add(this.camera);
+  			this.renderer = new THREE.WebGLRenderer({
+  				alpha: true,
+  				antialias: true
+  			});
+  			this.renderer.setClearColor(0x000000, 1);
+  			this.setSize();
+  			this.container = document.querySelector('.terrain');
+  			this.container.appendChild(this.renderer.domElement);
+  		}
+
+  		initLights() {
+  			this.mainLight = new three.HemisphereLight(0x000000, 0xbefbf2, 0.95);
+  			this.mainLight.position.set(0, -50, -100);
+  			this.scene.add(this.mainLight);
+
+  			this.ambientLight = new three.AmbientLight(0xaaccff, 0.35);
+  			this.ambientLight.position.set(-200, -100, 200);
+  			this.scene.add(this.ambientLight);
+  		}
+
+  		initMesh() {
+  			let mat = new three.MeshPhongMaterial({
+  				color: 0xdfdfdf,
+  				shading: three.FlatShading
+  			});
+  			this.geometry = new three.PlaneGeometry(600, 600, 300, 300);
+  			this.geometry.verticesNeedUpdate = true;
+  			for (let i = 0; i < this.geometry.vertices.length; i++) {
+  				let v = this.geometry.vertices[i];
+  				v.z = this.getNoise(v.x * 0.01, v.y * 0.01, v.z * 0.01, 0) * 30;
+  				v.z += this.getNoise(v.x * 0.03, v.y * 0.03, v.z * 0.03, 0) * 5;
+  				v.z += this.getNoise(v.x * 0.1, v.y * 0.125, v.z * 0.125, 0);
+  			}
+  			this.mesh = new three.Mesh(this.geometry, mat);
+  			this.mesh.rotation.x = PI * -0.5;
+  			this.mesh.position.set(0, -100, -150);
+  			this.scene.add(this.mesh);
+  			this.camera.lookAt(this.mesh.position);
+  		}
+
+  		getNoise(x, y, z, t) {
+  			return this.simplex.noise4D(x, y, z, t);
+  		}
+
+  		render() {
+  			let self = this;
+  			/*self.stats.begin();*/
+  			self.update();
+  			self.renderer.render(self.scene, self.camera);
+  			window.requestAnimationFrame(self.render.bind(self));
+  			/*self.stats.end();*/
+  		}
+  		update() {
+  			this.tick++;
+  			this.mesh.rotation.z += 0.0005;
+  		}
+  	}
+
+  	window.onload = () => {
+  		return new App();
+  	};
+
+  })(this, document, Math, THREE, SimplexNoise);
+</script>
