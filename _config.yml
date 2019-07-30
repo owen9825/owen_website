@@ -6,6 +6,9 @@ locale: "en-au"
 timezone: "Australia/Sydney"
 url: https://owen.engineer
 
+# Contact form
+simpleform_token: "4737952ec493c211b7b6c4dd1e726ea1"
+
 # SEO Related
 # https://search.google.com/search-console/not-verified?original_url=/search-console/ownership&original_resource_id
 google_site_verification : "EGw9ocP-Ozl04do549w1IiHGNR9zMBT6ok5GaMKbS-0"

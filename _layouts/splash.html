@@ -56,7 +56,7 @@
         {% endif %}
       </ul>
       <link rel="stylesheet" href="{{ site.baseurl }}/bower_components/intl-tel-input/build/css/intlTelInput.css">
-      <form class="form-inline" action="https://getsimpleform.com/messages?form_api_token=f0ffa35342caf970d4d238510b0bc77f" method="post">
+      <form class="form-inline" action="https://getsimpleform.com/messages?form_api_token={{ site.simpleform_token }}" method="post">
         <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
         <input type='hidden' name='redirect_to' value='https://media.giphy.com/media/xT5LMrH18OTqQ7QDBu/giphy.gif'/>
 
