@@ -1,0 +1,4 @@
+---
+layout: post
+---
+<span class='quora-content-embed' data-name='What-is-a-good-career-change-for-a-software-engineer/answer/Owen-Miller-3'>Read <a class='quora-content-link' data-width='560' data-height='260' href='https://www.quora.com/What-is-a-good-career-change-for-a-software-engineer/answer/Owen-Miller-3' data-type='answer' data-id='6317845' data-key='f8af1b2b7937402b9ec2c5e5f921c30a' load-full-answer='False' data-embed='wnltgsq'><a href='https://www.quora.com/Owen-Miller-3'>Owen Miller</a>&#039;s <a href='/What-is-a-good-career-change-for-a-software-engineer#ans6317845'>answer</a> to <a href='/What-is-a-good-career-change-for-a-software-engineer' ref='canonical'><span class="rendered_qtext">What is a good career change for a software engineer?</span></a></a> on <a href='https://www.quora.com'>Quora</a><script type="text/javascript" src="https://www.quora.com/widgets/content"></script></span>

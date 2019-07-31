@@ -1,0 +1,4 @@
+---
+layout: post
+---
+<span class='quora-content-embed' data-name='How-do-you-feel-when-a-co-worker-has-a-better-idea-than-you/answer/Owen-Miller-3'>Read <a class='quora-content-link' data-width='560' data-height='260' href='https://www.quora.com/How-do-you-feel-when-a-co-worker-has-a-better-idea-than-you/answer/Owen-Miller-3' data-type='answer' data-id='103238062' data-key='ad8c253c3874ce38a4be00af69556ec5' load-full-answer='False' data-embed='wnltgsq'><a href='https://www.quora.com/Owen-Miller-3'>Owen Miller</a>&#039;s <a href='/How-do-you-feel-when-a-co-worker-has-a-better-idea-than-you#ans103238062'>answer</a> to <a href='/How-do-you-feel-when-a-co-worker-has-a-better-idea-than-you' ref='canonical'><span class="rendered_qtext">How do you feel when a co-worker has a better idea than you?</span></a></a> on <a href='https://www.quora.com'>Quora</a><script type="text/javascript" src="https://www.quora.com/widgets/content"></script></span>
