@@ -2,10 +2,12 @@
 
 source "https://rubygems.org"
 
-#git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-group :jekyll_plugins do
-  gem "jekyll"
-  gem "jekyll-bower"
-  gem "jekyll-paginate"
-  gem "jekyll-sitemap"
-end
+gem 'jekyll-paginate'
+gem 'jekyll-gist'
+gem 'rouge'
+gem 'jekyll-watch'
+gem 'jekyll-bower'
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll", group: :jekyll_plugins
+gem 's3_website'
+gem 'jekyll-sitemap'
