@@ -4,13 +4,34 @@
 * [Install Jekyll](https://jekyllrb.com/docs/installation/)
 * Get [Ruby Virtual Environment](https://rvm.io/)
 * Change the shell to the Ruby shell, which allows logging in.
+* Initialize the Ruby virtual environment `rbenv init`
 * [Install the Gems](https://jekyllrb.com/docs/step-by-step/01-setup/): ```bundle install```
+* Install [jEnv](http://www.jenv.be/) for a local, old version of Java.
+* Add a compatible version of Java:
+```bash
+sudo apt install openjdk-8-jdk
+echo "Looking for a version of Java 8 − where is it?"
+update-java-alternatives --list
+echo "Pick a destination for the next command…"
+jenv add /usr/lib/jvm/java-1.8.0-openjdk-amd64
+```
 
 ## Running
 ```bash
+rbenv init
+eval "$(jenv init -)"
 bundle exec jekyll build
 bundle exec jekyll serve
 ```
+## Pushing Changes
+* Check the settings in [s3_website.yml](/s3_website.yml)
+* Initialize the Ruby virtual environment: `rbenv init`
+* Set a compatible version of Java: `jenv shell 1.8`
+* Push: `s3_website push`
+* Visit the bucket's page in the S3 console. Visit the properties and enable bucket hosting for the website.
+* Set the bucket policy to public.
+* Check the S3 website before publishing it to your own domain. There might still be some internal references to `localhost`, which will result in [404s](https://en.wikipedia.org/wiki/HTTP_404).
+
 ## Future
 * Animating face upon hover
 * Gif for face

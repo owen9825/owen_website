@@ -1,3 +1,5 @@
 _site/
 Gemfile.lock
 bower_components/
+s3_website.yml
+
