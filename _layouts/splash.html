@@ -38,17 +38,17 @@
         {% for linked_account in site.linked_accounts %}
           {% if linked_account.url != '' %}
             <li><a href="{{ linked_account.url }}"><svg title="{{ linked_account.name }}"
-              width="1.5rem" height="1.5rem" {% if social.name == 'applemusic' %} style="margin: 0 0 0 -2px" {% endif %}><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl | prepend: site.url }}/assets/svg/social-icons.svg#{{ linked_account.name }}-icon"></use></svg></a>
+              width="1.5rem" height="1.5rem" {% if social.name == 'applemusic' %} style="margin: 0 0 0 -2px" {% endif %}><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg/social-icons.svg#{{ linked_account.name }}-icon"></use></svg></a>
             </li>
           {% endif %}
         {% endfor %}
 
         {% if site.email != blank and site.show_email == 1 %}
-          <li><a href="mailto:{{site.email}}"><svg title="{{linked_account.name}}" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl | prepend: site.url }}/assets/svg/social-icons.svg#email-icon"></use></svg></a></li>
+          <li><a href="mailto:{{site.email}}"><svg title="{{linked_account.name}}" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg/social-icons.svg#email-icon"></use></svg></a></li>
         {% endif %}
 
         {% if site.show_rss == 1 %}
-          <li><a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}"><svg title="{{linked_account.name}}" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl | prepend: site.url }}/assets/svg/social-icons.svg#rss-icon"></use></svg></a></li>
+          <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><svg title="{{linked_account.name}}" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg/social-icons.svg#rss-icon"></use></svg></a></li>
         {% endif %}
       </ul>
       <link rel="stylesheet" href="{{ site.baseurl }}/bower_components/intl-tel-input/build/css/intlTelInput.css">
