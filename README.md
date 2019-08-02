@@ -32,6 +32,7 @@ bundle exec jekyll serve
 * Set the bucket policy to public.
 * Check the S3 website before publishing it to your own domain. There might still be some internal references to `localhost`, which will result in [404s](https://en.wikipedia.org/wiki/HTTP_404).
 * Change the DNS records with your actual DNS provider. Note that [Route 53](https://console.aws.amazon.com/route53/home) is happy to hold DNS records even if it isn't your actual provider.
+* For CloudFront's origins, enter the URL of the S3 website; don't select their S3 choice from the suggested list. Also, don't restrict bucket access, else people will strictly be required to visit eg `/about/index.html` rather than eg `/about`.
 
 ## Future
 * Animating face upon hover
