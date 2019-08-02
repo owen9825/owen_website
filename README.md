@@ -26,6 +26,7 @@ bundle exec jekyll serve
 ## Pushing Changes
 * Check the settings in [s3_website.yml](/s3_website.yml)
 * Initialize the Ruby virtual environment: `rbenv init`
+* Enable a locally isolated version of Java: `eval "$(jenv init -)"`
 * Set a compatible version of Java: `jenv shell 1.8`
 * Push: `s3_website push`
 * Visit the bucket's page in the S3 console. Visit the properties and enable bucket hosting for the website.
