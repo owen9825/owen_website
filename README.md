@@ -31,6 +31,7 @@ bundle exec jekyll serve
 * Visit the bucket's page in the S3 console. Visit the properties and enable bucket hosting for the website.
 * Set the bucket policy to public.
 * Check the S3 website before publishing it to your own domain. There might still be some internal references to `localhost`, which will result in [404s](https://en.wikipedia.org/wiki/HTTP_404).
+* Change the DNS records with your actual DNS provider. Note that [Route 53](https://console.aws.amazon.com/route53/home) is happy to hold DNS records even if it isn't your actual provider.
 
 ## Future
 * Animating face upon hover
