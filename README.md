@@ -2,10 +2,10 @@
 * I'll use Jekyll, since I like its decoupling of things and its easy way of including extra pages. Also, I like how [Tanuki](https://tanuki.ai) turned out.
 ## Installation
 * [Install Jekyll](https://jekyllrb.com/docs/installation/)
-* Get [Ruby Virtual Environment](https://rvm.io/)
-* Change the shell to the Ruby shell, which allows logging in.
-* Initialize the Ruby virtual environment `rbenv init`
-* [Install the Gems](https://jekyllrb.com/docs/step-by-step/01-setup/): ```bundle install```
+* Install [rbenv](https://github.com/rbenv/rbenv#installation) and use [Ruby v2](https://talk.jekyllrb.com/t/error-no-implicit-conversion-of-hash-into-integer/5890)
+    * `rbenv install --list`
+* Initialize the Ruby virtual environment: `rbenv init`. A new bundler will need to be installed for this version of Ruby: `gem install bundler`.
+* [Install the Gems](https://jekyllrb.com/docs/step-by-step/01-setup/)
 * Install [jEnv](http://www.jenv.be/) for a local, old version of Java.
 * Add a compatible version of Java:
 ```bash
@@ -15,6 +15,8 @@ update-java-alternatives --list
 echo "Pick a destination for the next command…"
 jenv add /usr/lib/jvm/java-1.8.0-openjdk-amd64
 ```
+* Install Bower: `npm install -g bower`
+* Install the JavaScript dependencies specified in [bower.json](./bower.json): `bower install`.
 
 ## Running
 ```bash
