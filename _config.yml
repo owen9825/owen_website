@@ -22,8 +22,8 @@ collections:
   # Linked Accounts
 linked_accounts:
 -  { name: facebook, url: 'https://www.facebook.com/owen.miller.986' }
--  { name: twitter, url: 'https://twitter.com/kokociel1' }
--  { name: instagram, url: 'https://instagram.com/kokociel/' }
+-  { name: twitter, url: 'https://twitter.com/OwenFM_' }
+-  { name: instagram, url: 'https://www.instagram.com/owenfm_/' }
 -  { name: google-plus, url: '' }
 -  { name: linkedin, url: 'https://www.linkedin.com/in/owen-miller-12112273/' }
 -  { name: skype, url: '' }
