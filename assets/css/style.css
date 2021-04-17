@@ -1,10 +1,3 @@
-/*** Color definitions ***/
-:root {
-    --deep-purple: #874c98;
-		--alien-green: #83d496;
-		--gold: #a5937b;
-}
-
 /*** Reset ***/
 html, body, div, main, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, input, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
@@ -81,16 +74,6 @@ body {
 	font-family: 'din', fantasy, serif;
  /* font size should be set by the browser, not our site */
 	line-height: 1.7;
-}
-
-a, a:active, a:visited {
-	text-decoration: none;
-	border-bottom: 1px solid #839496;
-	padding-bottom: 2px;
-}
-a:hover {
-	background-color: #839496;
-	color: #000000;
 }
 
 form, input, textarea {
@@ -242,7 +225,23 @@ https://jekyllthemes.dev/personal-portfolio-to-play-with-jekyll-and-github-pages
 }
 
 .socials li a svg * {
-	fill: var(--deep-purple);
+    fill: var(--deep-purple);
+}
+
+.socials *:hover {
+    fill: var(--gold);
+    color: var(--gold);
+}
+
+a:hover {
+    background-color: #839496;
+    color: #000000;
+}
+
+a, a:active, a:visited {
+	text-decoration: none;
+	border-bottom: 1px solid #839496;
+	padding-bottom: 2px;
 }
 
 div .horizontal-container {
