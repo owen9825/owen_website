@@ -228,7 +228,7 @@ https://jekyllthemes.dev/personal-portfolio-to-play-with-jekyll-and-github-pages
     fill: var(--deep-purple);
 }
 
-.socials *:hover {
+.socials li:hover a:hover svg:hover * {
     fill: var(--gold);
     color: var(--gold);
 }
@@ -316,13 +316,6 @@ img.center {
 
 /*** Media Queries ***/
 @media all and (max-width: 870px) {
-
-	#page, #header, #content, #footer {
-		width: inherit;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
 	#sidebar {
 		position: relative;
 		text-align: left;

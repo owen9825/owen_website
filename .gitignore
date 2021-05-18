@@ -3,3 +3,5 @@ Gemfile.lock
 bower_components/
 s3_website.yml
 
+progress.md
+
