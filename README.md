@@ -36,7 +36,7 @@ bundle exec jekyll serve
 * Check the S3 website before publishing it to your own domain. There might still be some internal references to `localhost`, which will result in [404s](https://en.wikipedia.org/wiki/HTTP_404).
 * Change the DNS records with your actual DNS provider. Note that [Route 53](https://console.aws.amazon.com/route53/home) is happy to hold DNS records even if it isn't your actual provider.
 * For CloudFront's origins, enter the URL of the S3 website; don't select their S3 choice from the suggested list. Also, don't restrict bucket access, else people will strictly be required to visit eg `/about/index.html` rather than eg `/about`.
-* The changes will first be visible at <http://owen.engineer.s3-website-us-east-1.amazonaws.com/>, before propagating through CloudFront to https://owen.engineer.
+* The changes will first be visible at <http://owen.engineer.s3-website-us-east-1.amazonaws.com/>, before propagating through CloudFront to https://owen.engineer, once you invalidate its cache. 
 
 ## Future
 * Animating face upon hover
