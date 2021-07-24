@@ -2,6 +2,7 @@
 * I'll use Jekyll, since I like its decoupling of things and its easy way of including extra pages. Also, I like how [Tanuki](https://tanuki.ai) turned out.
 ## Installation
 * [Install Jekyll](https://jekyllrb.com/docs/installation/)
+* Install ruby-dev: `sudo apt-get install ruby-dev`
 * Install [rbenv](https://github.com/rbenv/rbenv#installation) and use [Ruby v2](https://talk.jekyllrb.com/t/error-no-implicit-conversion-of-hash-into-integer/5890)
     * `rbenv install --list`
 * Initialize the Ruby virtual environment: `rbenv init`. A new bundler will need to be installed for this version of Ruby: `gem install bundler`.
