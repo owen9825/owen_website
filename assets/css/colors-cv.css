@@ -4,16 +4,18 @@
     --alien-green: #83d496;
     --darker-green: #70b580;
     --gold: #a5937b;
+    --sublime-black: #272822;
+    --cobalt-blue: #839496;
 }
 
 html, body {
-	background-color: #272822; /* Sublime black */
-	color: #839496; /* cobalt blue */
+	background-color: var(--sublime-black);
+	color: var(--cobalt-blue);
 }
 
 a, a:visited, a:active {
-	color: #a5937b; /* faded gold */
-	border-color: #874c98; /* dark gray */
+	color: var(--gold);
+	border-color: var(--deep-purple);
 }
 
 a:hover {
@@ -37,20 +39,20 @@ h1 a:hover {
 }
 
 article h1 a.anchor {
-	color: #a5937b;
+	color: var(--gold);
 }
 
 blockquote {
-	border-color: #a5937b;
+	border-color: var(--gold);
 }
 
 #sidebar a:hover {
-	color: #a5937b;
-	background-color: #874c98;
+	color: var(--gold);
+	background-color: var(--deep-purple);
 }
 
 #footer {
-	border-color: #874c98;
+	border-color: var(--deep-purple);
 }
 
 input.btn, button.btn {
