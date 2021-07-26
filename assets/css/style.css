@@ -221,6 +221,11 @@ https://jekyllthemes.dev/personal-portfolio-to-play-with-jekyll-and-github-pages
 	list-style: none;
 }
 
+ul.socials {
+	justify-content: center;
+	padding: 0px;
+}
+
 .socials li {
 	margin: 5px;
 	text-align: center;
