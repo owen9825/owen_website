@@ -51,8 +51,13 @@ header {
   text-align: right;
 }
 
+.hero__wrap h2 {
+	margin-right: 1rem;
+}
+
 .hero__meta a {
-  background: var(--deep-purple);
+	padding-right: 0.8rem;
+	background: var(--deep-purple);
 }
 
 body {
