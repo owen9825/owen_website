@@ -178,8 +178,6 @@ h3 {
 }
 
 #footer {
-	width: 100%;
-	margin: 50px auto 20px auto;
 	padding-top: 10px;
 	padding-left: 1rem;
 	font-size: 0.85em;
@@ -332,6 +330,10 @@ img.center {
 	float: right;
 }
 
+.kw-alert {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
 
 
 /*** Media Queries ***/
@@ -342,8 +344,8 @@ img.center {
 
 	#content {
 		width: 95%;
-		padding-left: 1rem;
-		padding-right: 1rem;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
 		margin: 0px;
 	}
 
