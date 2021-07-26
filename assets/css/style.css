@@ -91,6 +91,7 @@ body {
 
 form, input, textarea {
     width:100%;
+	padding: 0px;
     font-family: 'din', fantasy;
 }
 
@@ -177,15 +178,16 @@ h3 {
 }
 
 #footer {
-	width: 600px;
+	width: 100%;
 	margin: 50px auto 20px auto;
 	padding-top: 10px;
+	padding-left: 1rem;
 	font-size: 0.85em;
 	border-top: 1px solid #073642;
 }
 
 #content {
-	width: 600px;
+	width: 100%;
 	margin: 3.75rem auto;
 }
 
@@ -329,10 +331,26 @@ img.center {
 
 /*** Media Queries ***/
 @media all and (max-width: 870px) {
+	#page {
+		width: 100%;
+	}
+
+	#content {
+		width: 95%;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin: 0px;
+	}
+
+	.hero__wrap {
+		left: 57%;
+		width: 100%;
+	}
+	
 	#sidebar {
 		position: relative;
 		text-align: left;
-		width: 100%;
+		width: 80%;
 		left: 0;
 		margin: 10px 10px 20px 10px;
 	}
