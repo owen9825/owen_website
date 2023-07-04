@@ -53,7 +53,7 @@
           <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><svg title="{{linked_account.name}}" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg/social-icons.svg#rss-icon"></use></svg></a></li>
         {% endif %}
       </ul>
-      <link rel="stylesheet" href="{{ site.baseurl }}/bower_components/intl-tel-input/build/css/intlTelInput.css">
+      <link rel="stylesheet" href="{{ site.baseurl }}/bower_components/intl-tel-input/build/css/intlTelInput.min.css">
       <form class="form-inline kwes-form" action="https://kwes.io/api/foreign/forms/l6IzI5rwtjzTd6GFvc9F" has-recaptcha-v3
       recaptcha-site-key="6LfHjr0bAAAAAGZE_F4hiMIo3nik5dTeg7frac80">
         <input type='hidden' name='redirect_to' value='https://media.giphy.com/media/xT5LMrH18OTqQ7QDBu/giphy.gif'/>
@@ -83,7 +83,7 @@
       $('#sidebar nav ul').mobileMenu({'topOptionText': 'Menu', 'prependTo': '#sidebar nav'});
     });
   </script>
-  <script src="{{ site.baseurl }}/bower_components/intl-tel-input/build/js/intlTelInput.js"></script>
+  <script src="{{ site.baseurl }}/bower_components/intl-tel-input/build/js/intlTelInput.min.js"></script>
   <script>
     $("#phone").intlTelInput({"preferredCountries":["us","au"], "utilsScript":"{{ site.baseurl }}/bower_components/intl-tel-input/build/js/utils.js"});
   </script>
