@@ -84,7 +84,7 @@ table {
 
 /*** Basics ***/
 body {
-	font-family: 'din', fantasy, serif;
+	font-family: 'Akatab-Regular', Calibri, fantasy, serif;
  /* font size should be set by the browser, not our site */
 	line-height: 1.7;
 }
@@ -92,7 +92,7 @@ body {
 form, input, textarea {
     width:100%;
 	padding: 0px;
-    font-family: 'din', fantasy;
+    font-family: 'Akatab-Regular', Calibri, fantasy, serif;
 }
 
 p, pre { margin-bottom: 15px; }
@@ -369,11 +369,12 @@ img.center {
 
 }
 
+
 @font-face {
-    font-family: 'din';
-    src: url('../fonts/din1451alt.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Akatab-Regular';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/Akatab-Regular.ttf') format('truetype');
 }
 
 @font-face {
