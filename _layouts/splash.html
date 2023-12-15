@@ -55,13 +55,13 @@
       recaptcha-site-key="6LfHjr0bAAAAAGZE_F4hiMIo3nik5dTeg7frac80">
         <input type='hidden' name='redirect_to' value='https://media.giphy.com/media/xT5LMrH18OTqQ7QDBu/giphy.gif'/>
         <label for="name">Name:</label>
-        <input type="text" name='name' placeholder="Your name" class="form-control"/ rules="required">
+        <input type="text" name='name' id="name" placeholder="Your name" class="form-control"/ rules="required">
         <label for="email">Email address:</label>
         <input type="email" name="email" id="email" placeholder="hello@example.com" class="form-control"/>
         <label for="phone">Phone:</label>
         <input type="tel" id="phone" name="phone" class="form-control"/>
         <label for="message">Message:</label>
-        <textarea lang="{{ site.locale }}" name="message" required="true" rules="required"
+        <textarea lang="{{ site.locale }}" name="message" id="message" required="true" rules="required"
         placeholder="Hello Owen, I need to tell you something"></textarea>
         <caption lang="fr">On peut envoyer un message en français si c'est plus facile.</caption>
         <input type='submit' value='Submit' class="btn"/>
