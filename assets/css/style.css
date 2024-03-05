@@ -1,9 +1,12 @@
 /*** Color definitions ***/
 :root {
     --deep-purple: #874c98;
+    --pale-purple: rgba(219, 199, 227, 0.85);
+    --darker-purple: #4c115d;
     --alien-green: #83d496;
     --darker-green: #70b580;
     --gold: #a5937b;
+    --font-border-width: 4px;
 }
 
 /*** Reset ***/
@@ -374,8 +377,13 @@ img.center {
 	}
 
 	#sidebar nav select.mnav {
-		display: block;
-		margin-bottom: 15px; /* Margin is outside the border */
+        display: block;
+        margin-bottom: 15px; /* Margin is outside the border */
+    }
+    .mnav {
+		background-color: var(--alien-green);
+		color: var(--deep-purple);
+        font-weight: bold;
 	}
 
 }
