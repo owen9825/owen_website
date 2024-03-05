@@ -55,3 +55,24 @@ gems:
 
 plugins_dir: [jekyll-paginate, jekyll-bower]
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'bower.json', 'node_modules', 'package.json', '*.patch', '*.csv']
+
+# Caching
+defaults:
+  - scope:
+      path: "*.webp"
+    values:
+      cache_control: "public, max-age=2147483647"
+      image: true
+  - scope:
+      path: "*.svg"
+    values:
+      cache_control: "public, max-age=2147483647"
+
+  - scope:
+      path: "*.woff2"
+    values:
+      cache_control: "public, max-age=2147483647"
+  - scope:
+      path: "*.ttf"
+    values:
+      cache_control: "public, max-age=2147483647"
