@@ -384,6 +384,7 @@ img.center {
 		background-color: var(--alien-green);
 		color: var(--deep-purple);
         font-weight: bold;
+        font-size: 1rem;
 	}
 
 }
