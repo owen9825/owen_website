@@ -33,6 +33,11 @@ header {
   background-position: 50% 35%;
   background-size: cover;
 }
+@media (max-width: 767px) {
+	.hero {
+		width: 105%;
+	}
+}
 
 .hero__wrap {
   position: absolute;
@@ -126,9 +131,14 @@ acronym, abbr {
 
 
 h1 {
-	font-size: 3.5rem;
+	font-size: 4.2rem;
 	font-family: 'Carter One', cursive;
-	margin: 0 0 0.5rem 0;
+	margin: 0 0 4px 0;
+}
+@media (max-width: 767px) {
+	h1 {
+		font-size: 3.5rem;
+	}
 }
 h2 {
 	font-size: 2rem;
@@ -165,13 +175,12 @@ h3 {
 }
 
 #header {
-	width: 100%;
-	margin: 0px auto 3.5rem auto;
+  width: 100%;
+  margin: 0;
   text-align: right;
 }
-#header h1 {
-	font-size: 4.2em;
-	margin-bottom: 4px;
+.hero__wrap {
+	margin: 0px auto 3.5rem auto;
 }
 #header h1 a {
 	border: none;
@@ -353,7 +362,7 @@ img.center {
 		left: 57%;
 		width: 100%;
 	}
-	
+
 	#sidebar {
 		position: relative;
 		text-align: left;
