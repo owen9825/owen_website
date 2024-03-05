@@ -70,6 +70,8 @@ body {
 }
 ol, ul {
 	list-style: bullet;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 blockquote, q {
